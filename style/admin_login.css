@@ -1,0 +1,93 @@
+:root {
+  --dark-blue: #1A4170;
+  --green: #29DF64;
+  --light-green: rgba(41, 223, 100, 0.1);
+  --light-gray: #f8f9fa;
+}
+
+body {
+  font-family: 'Tajawal', sans-serif;
+  background-color: var(--light-gray);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.card-header {
+  background-color: var(--dark-blue);
+  color: white;
+  text-align: center;
+  padding: 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--green);
+  border-color: var(--green);
+}
+
+.btn-primary:hover {
+  background-color: #22c658;
+  border-color: #22c658;
+}
+
+.form-control:focus {
+  border-color: var(--green);
+  box-shadow: 0 0 0 0.2rem var(--light-green);
+}
+
+.alert-danger {
+  background-color: #ffefef;
+  color: #c82333;
+  border-color: #f5c6cb;
+}
+
+/* Mobile phones (≤600px) */
+@media (max-width: 600px) {
+  .login-card {
+    margin: 0 1rem;
+    max-width: none;
+    width: calc(100% - 2rem);
+  }
+  .card-header {
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  .btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+  }
+}
+
+/* Tablets (601px–900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+  .login-card {
+    max-width: 450px;
+  }
+  .card-header {
+    padding: 1.1rem;
+    font-size: 1.3rem;
+  }
+}
+
+/* Desktops (≥901px) */
+@media (min-width: 901px) {
+  .login-card {
+    max-width: 400px; /* original */
+  }
+  .card-header {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+  }
+}
